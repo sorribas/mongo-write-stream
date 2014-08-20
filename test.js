@@ -6,7 +6,7 @@ var db = mongojs('test', ['pokemon']);
 test('basic test', function(t) {
   var run = function() {
     var mongoStream = mws('test');
-    var pokemon = mongoStream.createWriteStream('pokemon');
+    var pokemon = mongoStream('pokemon');
     pokemon.on('finish', function() {
       db.pokemon.find().sort({name: 1}, function(err, pokemon) {
         t.equal(pokemon.length, 3);

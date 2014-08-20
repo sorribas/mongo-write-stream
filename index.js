@@ -5,7 +5,7 @@ var create = function(conn) {
   var db = mongojs(conn);
   var that = {};
 
-  that.createWriteStream = function(colName) {
+  return function(colName) {
     var collection = db.collection(colName);
     var strm = new stream.Writable({objectMode: true, highWaterMark: 16});
     strm._write = function(obj, enc, cb) {
@@ -18,8 +18,6 @@ var create = function(conn) {
 
     return strm;
   };
-
-  return that;
 };
 
 module.exports = create;

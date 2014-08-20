@@ -11,10 +11,9 @@ Example.
 
 ```js
 var mongoWriteStream = require('mongo-write-stream');
-var streamDb = mongoWriteStream('mongodb://hostname/mydb');
+var collectionWriteStream = mongoWriteStream('mongodb://hostname/mydb');
 
-var collectionStream = streamDb.createWriteStream('collectionName');
-someObjectReadableStream.pipe(collectionStream);
+someObjectReadableStream.pipe(collectionWriteStream('collectionName'));
 ```
 
 Instead of a connection string you can also pass a [mongodb native driver](https://github.com/mongodb/node-mongodb-native)
