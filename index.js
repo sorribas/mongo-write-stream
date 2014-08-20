@@ -3,7 +3,6 @@ var stream = require('stream');
 
 var create = function(conn) {
   var db = mongojs(conn);
-  var that = {};
 
   return function(colName) {
     var collection = db.collection(colName);
