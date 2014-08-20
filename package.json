@@ -1,6 +1,6 @@
 {
   "name": "mongo-write-stream",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Writable streams to mongodb collections.",
   "main": "index.js",
   "dependencies": {
