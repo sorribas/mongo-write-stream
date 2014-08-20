@@ -1,6 +1,8 @@
 mongo-write-stream
 ==================
 
+[![build status](https://secure.travis-ci.org/sorribas/mongo-write-stream.png)](http://travis-ci.org/sorribas/mongo-write-stream)
+
 Node.js module that creates a writable object stream to a mongodb collection.
 
 ```
